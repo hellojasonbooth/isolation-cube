@@ -46,46 +46,65 @@ section.camera {
         }
         
         div.front {
-            width: 325px;
-            height: 89px;
+            width: 326px;
+            height: 90px;
             background-image: url("img/front.png");
+        }
+        div.front.active {
+            transform: translateX(-50%) translateY(-50%) translateZ(44px);
+        }
+        div.front.inactive {
             transform: translateX(-50%) translateY(-50%) translateZ(60px);
         }
+
         
         div.top {
-            width: 325px;
-            height: 89px;
+            width: 326px;
+            height: 90px;
             background-image: url("img/front.png");
-            transform: translateX(-50%) translateY(-120px) translateZ(0px) rotateX(90deg);
+        }
+        div.top.active {
+            transform: translateX(-50%) translateY(-89px) translateZ(0) rotateX(90deg);
         }
         
         div.bottom {
-            width: 325px;
-            height: 89px;
+            width: 326px;
+            height: 90px;
             background-image: url("img/front.png");
+        }
+        div.bottom.active {
             transform: translateX(-50%) translateY(0px) translateZ(0px) rotateX(-90deg);
         }
         
         div.back {
-            width: 325px;
-            height: 89px;
+            width: 326px;
+            height: 90px;
             background-image: url("img/front.png");
-            transform: translateX(-50%) translateY(-60px) translateZ(-60px) rotateX(180deg);
+        }
+        div.back.active {
+            transform: translateX(-50%) translateY(-44px) translateZ(-44px) rotateX(180deg);
         }
         
         div.side-left {
-            width: 89px;
-            height: 89px;
+            width: 90px;
+            height: 90px;
             background-image: url("img/side.png");
-            transform: translateX(-205px) translateY(-50%) rotateY(-90deg) translateZ(60px);
         }
-        
+        div.side-left.active {
+            transform: translateX(-147px) translateY(-50%) rotateY(-90deg) translateZ(60px);
+        }
+
         div.side-right {
-            width: 89px;
-            height: 89px;
+            width: 90px;
+            height: 90px;
             background-image: url("img/side.png");
-            transform: translateX(205px) translateY(-50%) rotateY(-90deg) translateZ(60px);
         }
+        div.side-right.active {
+            transform: translateX(177px) translateY(-50%) rotateY(-90deg) translateZ(60px);
+        }
+
+
+
     }
 }
 
