@@ -35,7 +35,7 @@ section.camera {
         top: 50%;
         left: 50%;
         transform-style: preserve-3d;
-        /* backface-visibility: hidden; */
+        backface-visibility: hidden;
 
     
         div.face {
@@ -43,36 +43,34 @@ section.camera {
             top: 0;
             left: 0;
             background-size: cover;
+            transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
         }
         
         div.front {
             width: 326px;
             height: 90px;
             background-image: url("img/front.png");
+            transform: translateX(-50%) translateY(0%) translateZ(88px) rotateX(-90deg);
         }
         div.front.active {
-            transform: translateX(-50%) translateY(-50%) translateZ(44px);
+            transform: translateX(-50%) translateY(-50%) translateZ(44px) rotateX(0deg);
         }
-        div.front.inactive {
-            transform: translateX(-50%) translateY(-50%) translateZ(60px);
-        }
-
         
         div.top {
             width: 326px;
             height: 90px;
             background-image: url("img/front.png");
+            transform: translateX(-50%) translateY(-208px) translateZ(0) rotateX(-45deg);
         }
         div.top.active {
             transform: translateX(-50%) translateY(-89px) translateZ(0) rotateX(90deg);
         }
+
         
         div.bottom {
             width: 326px;
             height: 90px;
             background-image: url("img/front.png");
-        }
-        div.bottom.active {
             transform: translateX(-50%) translateY(0px) translateZ(0px) rotateX(-90deg);
         }
         
@@ -80,47 +78,44 @@ section.camera {
             width: 326px;
             height: 90px;
             background-image: url("img/front.png");
+            transform: translateX(-50%) translateY(-31px) translateZ(-75px) rotateX(225deg);
         }
         div.back.active {
             transform: translateX(-50%) translateY(-44px) translateZ(-44px) rotateX(180deg);
         }
+
         
         div.side-left {
             width: 90px;
             height: 90px;
             background-image: url("img/side.png");
+            transform: translateX(-226px) translateY(-50%) rotateY(-90deg) rotateX(-45deg) translateZ(18px);
         }
         div.side-left.active {
-            transform: translateX(-147px) translateY(-50%) rotateY(-90deg) translateZ(60px);
+            transform: translateX(-147px) translateY(-50%) rotateY(-90deg) rotateX(0deg) translateZ(60px);
         }
+
 
         div.side-right {
             width: 90px;
             height: 90px;
             background-image: url("img/side.png");
+            transform: translateX(170px) translateY(-12%) rotateY(-90deg) rotateX(45deg) translateZ(30px);
         }
         div.side-right.active {
-            transform: translateX(177px) translateY(-50%) rotateY(-90deg) translateZ(60px);
+            transform: translateX(177px) translateY(-50%) rotateY(-90deg) rotateX(0deg) translateZ(60px);
         }
-
-
 
     }
 }
 
 
-
-
-
-div.credit {
+div.toggle {
+    width: 60px;
+    height: 60px;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    padding:30px 40px;
-
-    a {
-        text-decoration: none;
-        border-bottom: 1px solid #ffffffff;
-        color: #fff;
-    }
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
 }

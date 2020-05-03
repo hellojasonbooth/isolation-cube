@@ -1,9 +1,6 @@
     
-    
-    const cubeTag = document.querySelector('div.cube')
-  
-
-    function animate() {
+    // spinning cube test stuff here
+    const moveCube = () => {
 
       const cubeTag = document.querySelector('div.cube')
 
@@ -19,11 +16,27 @@
       cubeTag.style.transform = "rotateX(" + midY + "deg) rotateY(" + midX + "deg)"
     }
 
-
-    document.addEventListener('mousemove', function () {
-      animate()
+    document.addEventListener('mousemove', function (event) {
+      moveCube()
     })
 
-    document.addEventListener("touchmove", function () {
-      animate()
+    document.addEventListener("touchmove", function (event) {
+      moveCube()
+    })
+
+
+    // quick toggle setup
+    const toggleTag = document.querySelector('div.toggle')
+
+    const animateBox = () => {
+      const shapeTags = document.querySelectorAll('div.face')
+
+      shapeTags.forEach(tag => {
+        tag.classList.toggle('active')
+      })
+
+    }
+
+    toggleTag.addEventListener('click', function (){
+      animateBox()
     })
